@@ -4,7 +4,6 @@ Atividade 1 da disciplina Programação para Dispositivos Móveis I (Prof. Arley
 
 App Flutter para Android que coleta a localização do aparelho em segundo plano, salva cada posição em SQLite e mostra o histórico em lista e em um mapa interativo.
 
-
 <details>
 <summary><strong>Telas e funcionalidades</strong></summary>
 
@@ -47,6 +46,7 @@ Declaradas no `AndroidManifest.xml` e pedidas durante a execução quando necess
 - `FOREGROUND_SERVICE` e `FOREGROUND_SERVICE_LOCATION`: coleta em primeiro plano.
 - `POST_NOTIFICATIONS`: notificação da coleta (Android 13 ou superior).
 - `INTERNET`: imagens do mapa.
+- `WAKE_LOCK`: mantém a coleta funcionando com a tela apagada.
 
 O app verifica se o GPS está ligado, trata recusa da permissão e, em caso de recusa permanente, orienta a abrir as configurações do aplicativo.
 
@@ -80,6 +80,7 @@ O limite de 100 vale só para a consulta; nenhum registro antigo é apagado auto
 - `sqflite` e `path`: banco SQLite local.
 - `flutter_map` e `latlong2`: mapa interativo.
 - `path_provider`: pasta privada usada pelo cache das imagens do mapa.
+- `flutter_localizations`: textos padrão do Flutter, como o calendário do filtro, em português.
 - Mapa base do OpenStreetMap, com atribuição exibida no próprio mapa e cache conforme a política de uso dos tiles.
 - Fonte Plus Jakarta Sans e ícones próprios em PNG.
 
