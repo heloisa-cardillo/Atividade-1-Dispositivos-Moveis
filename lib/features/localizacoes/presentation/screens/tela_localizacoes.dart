@@ -69,7 +69,7 @@ class _TelaLocalizacoesState extends State<TelaLocalizacoes> {
       confirmText: 'OK',
       saveText: 'Aplicar',
     );
-    if (periodo == null) return;
+    if (!mounted || periodo == null) return;
     setState(() => _periodo = periodo);
     await _carregar();
   }
@@ -86,8 +86,8 @@ class _TelaLocalizacoesState extends State<TelaLocalizacoes> {
         title: const Text('Limpar histórico?'),
         content: Text(
           widget.coletaAtiva
-              ? 'Todas as localizações salvas serão apagadas. A coleta continua ativa, então novas posições serão gravadas em seguida.'
-              : 'Todas as localizações salvas serão apagadas.',
+              ? 'Todas as localizações salvas serão apagadas de forma permanente. A coleta continua ativa, então novos registros continuarão sendo salvos.'
+              : 'Todas as localizações salvas serão apagadas de forma permanente.',
         ),
         actions: [
           TextButton(
@@ -97,7 +97,7 @@ class _TelaLocalizacoesState extends State<TelaLocalizacoes> {
           TextButton(
             onPressed: () => Navigator.pop(contexto, true),
             style: TextButton.styleFrom(foregroundColor: _vermelho),
-            child: const Text('Limpar'),
+            child: const Text('Limpar histórico'),
           ),
         ],
       ),
