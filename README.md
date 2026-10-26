@@ -111,8 +111,8 @@ assets/
 │   └── (ícones internos em PNG)
 ├── fonts/
 │   └── PlusJakartaSans-*.ttf
-└── midia/
-    └── teste.mp4                 # vídeo de teste
+└── media/
+    └── Video demostrativo Atividade 1.gif   # vídeo demonstrativo
 android/app/src/main/
 ├── AndroidManifest.xml
 └── res/
@@ -174,4 +174,4 @@ Na primeira coleta, aceite a permissão de localização e a de notificações.
 
 <br>
 
-[Assistir ao vídeo de teste](assets/midia/teste.mp4)
+![Vídeo demonstrativo](assets/media/Video%20demostrativo%20Atividade%201.gif)
